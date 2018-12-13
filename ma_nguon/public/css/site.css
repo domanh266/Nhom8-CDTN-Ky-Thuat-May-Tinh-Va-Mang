@@ -1,0 +1,165 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+/* DANG NHAP / DANG KY */
+#head .well a {
+		color: #000000;
+} 
+
+/* SEARCH */
+form.search input[type=text] {
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #000000;
+    color: white;
+    font-size: 12px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.search button:hover {
+    background: #111111;
+}
+
+form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* MENU */
+
+.navbar-default .navbar-nav>li>a {
+	color: #000000;
+	font-size: 15px;
+}
+
+#action {
+	color: #B22222;
+}
+
+/* SLIDESHOW */
+.carousel-indicators li {
+	background-color: #666666;
+}
+
+.carousel-indicators .active {
+	background-color: #000000;
+}
+
+/* PANEL SAN PHAM */
+
+.panel-footer a {
+	text-decoration: none;
+	color: #000000;
+}
+
+/* FOOTER */
+
+#info a {
+	color: #000000;
+}
+
+#mxh a {
+	color: #EEEEEE;
+}
+
+/* BREADCRUMB */
+
+.breadcrumb {
+	background-color: #FFFFFF;
+	padding: 0px;
+}
+
+.breadcrumb>li+li:before { 
+	content: ">\00a0";
+	color: #888888;
+}
+
+.breadcrumb a {
+	color: #000000;
+	font-size: 12px;
+}
+
+/* RATING */
+
+#rating a {
+	color: #000000;
+}
+
+/* BUTTON THEM VAO GIO HANG */
+#btn_tvg {
+	color: #FFFFFF;
+	background-color: #DD0000;
+}
+
+#btn_tvg:hover {
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+/* TAB SAN PHAM */
+.nav-tabs a {
+	color: #000000;
+}
+
+/* TABLE GIO HANG */
+
+.table a {
+	color: #000000;
+}
+
+/* BUTTON MUA HANG */
+#btn_mh {
+	color: #FFFFFF;
+	background-color: #FF3399;
+}
+
+#btn_mh:hover {
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+/* BUTTON DANG NHAP */
+#btn_dn {
+	background-color: #111111;
+	color: #FFFFFF;
+}
+
+#btn_dn:hover {
+	background-color: #444444;
+	color: #FFFFFF;
+}
+
+
+/* THANH VIEN */
+
+#menu_tk a {
+	color: #000000;
+}
+
+#menu_tk a:hover {
+	background-color: #F5F5F5;
+}
+
+/* scroll Back To Top */
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 15px;
+    right: 5px;
+    display:none;
+}

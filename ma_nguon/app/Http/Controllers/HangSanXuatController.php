@@ -9,6 +9,9 @@ class HangSanXuatController extends Controller
 {
     public function getThemHangSanXuat()
     {
+        if(session('kieu_thanh_vien') != 1)
+            return abort(404);
+
         return view('admin/hang-san-xuat/them-hang-san-xuat');
     }
 
@@ -22,7 +25,7 @@ class HangSanXuatController extends Controller
                 'ten.required'=>'Chưa nhập tên hãng sản xuất!',
                 'ten.unique'=>'Hãng sản xuất đã tồn tại!',
                 'ten.min'=>'Tên hãng sản xuất phải từ 3 đến 100 ký tự!',
-                'ten.max'=>'Tên hãng sản xuất phải từ 3 đến 100 ký tự'
+                'ten.max'=>'Tên hãng sản xuất phải từ 3 đến 100 ký tự!'
             ]
         );
     	$hang_san_xuat = new HangSanXuat;
@@ -33,9 +36,11 @@ class HangSanXuatController extends Controller
     	return redirect('admin/hang-san-xuat/them-hang-san-xuat')->with('thongbao', 'Thêm thành công!');
     }
 
-
     public function getDanhSachHangSanXuat()
     {
+        if(session('kieu_thanh_vien') != 1)
+            return abort(404);
+        
         $hang_san_xuat = HangSanXuat::paginate(10);
         return view('admin.hang-san-xuat.danh-sach-hang-san-xuat', ['hang_san_xuat' => $hang_san_xuat]);
     }
@@ -52,6 +57,9 @@ class HangSanXuatController extends Controller
 
     public function getSuaHangSanXuat($id)
     {
+        if(session('kieu_thanh_vien') != 1)
+            return abort(404);
+
         $hang_san_xuat = HangSanXuat::find($id);
         return view('admin.hang-san-xuat.sua-hang-san-xuat', ['hang_san_xuat' => $hang_san_xuat]);
     }
@@ -79,6 +87,9 @@ class HangSanXuatController extends Controller
 
     public function getXoaHangSanXuat($id)
     {
+        if(session('kieu_thanh_vien') != 1)
+            return abort(404);
+        
         $hang_san_xuat = HangSanXuat::find($id);
         $hang_san_xuat->delete();
         return redirect('admin/hang-san-xuat/danh-sach-hang-san-xuat/')->with('thongbao', 'Xóa thành công!');
